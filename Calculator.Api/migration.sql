@@ -22,7 +22,7 @@ CREATE TABLE CalculationHistory
     UserId INT FOREIGN KEY REFERENCES [User](Id),
     FirstValue DECIMAL(12,2),
     SecondValue DECIMAL(12,2), 
-    OperationType INT, 
+    OperationType NVARCHAR(50), 
     Result DECIMAL(12,2) NOT NULL,
     CalculationDate DATETIME NOT NULL DEFAULT GETDATE()
 );

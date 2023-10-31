@@ -33,7 +33,7 @@ namespace Calculator.Api
             services.AddHttpClient();
 
             var migrator = new DatabaseMigrator(readconfig.SqlConnection!);
-            //migrator.Migrate();
+            migrator.Migrate();
             var dbConfig = new DbConfig();
             Configuration.Bind("DbConfig", dbConfig); // Ensure you have a "DbConfig" section in your appsettings.json
 
